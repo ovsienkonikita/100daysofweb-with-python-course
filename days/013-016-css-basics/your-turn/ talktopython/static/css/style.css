@@ -1,0 +1,23 @@
+body {
+    font-size: 24px;
+    padding: 0;
+}
+
+.my-nav li {
+    display: inline-block;
+    padding: 5px 10px 5px 5px;
+}
+
+.my-nav {
+    background-color: #222222;
+}
+
+.my-nav a,
+.my-nav a:visited{
+    color: #aaa;
+    text-decoration: none;
+}
+
+.my-nav a:active{
+    color: yellow;
+}
