@@ -21,6 +21,23 @@
   }
 
   const secretNumber = getRandomInt(1, 15);
+  let userInput = parseInt(prompt("Guess number"));
+  while (userInput !== secretNumber){
+    if (userInput > secretNumber){
+      alert("Too high");
+    }
+    else if (userInput < secretNumber){
+      alert("Too low");
+    }
+    userInput = prompt("Guess number");
+    if (userInput === "q" || userInput === null){
+      break;
+    }
+    else {
+      userInput = parseInt(userInput);
+    }
+  }
+  alert("You guessed it");
 
   // you code
 
