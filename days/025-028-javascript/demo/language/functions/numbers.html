@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JS is Fun!</title>
+    <title>JS is Fun!</title>
 </head>
 <body>
-  <script type="text/javascript">
-  /* write a function to sum numbers, if no argument is provided
-    default summing a range of 1..100 - write a second function
-    called range to return that range of integers */
+<script type="text/javascript">
+    /* write a function to sum numbers, if no argument is provided
+      default summing a range of 1..100 - write a second function
+      called range to return that range of integers */
 
-  function sum(numbers){
-    // you code
-  }
+    function sum(numbers) {
+        // you code
+        if (numbers === undefined) {
+            numbers = range(100)
+        }
+        let sum = 0;
+        for (let n of numbers){
+          sum += n;
+        }
+        return sum;
+    }
 
+    function* range(n) {
+        for (let i = 0; i <= n; i++) {
+            yield i;
+        }
+    }
 
-  // test code
-  // with argument
-  let ages = [11, 18, 25, 17, 33];
-  console.log(sum(ages)); // 104
+    // test code
+    // with argument
+    let ages = [11, 18, 25, 17, 33];
+    console.log(sum(ages)); // 104
 
-  // without argument
-  console.log(sum()); // 5050 default
-  </script>
+    // without argument
+    console.log(sum()); // 5050 default
+</script>
 </body>
 </html>
