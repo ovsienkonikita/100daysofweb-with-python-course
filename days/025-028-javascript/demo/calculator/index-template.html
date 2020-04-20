@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>JS is Fun!</title>
   <style>
@@ -7,17 +8,21 @@
       width: 800px;
       margin: 0 auto;
     }
+
     #result {
       font-size: 200%;
       font-weight: bold;
     }
-    #result, #calculateForm {
+
+    #result,
+    #calculateForm {
       padding: 10px;
       margin: 10px 0;
       border: 1px solid #ddd;
     }
   </style>
 </head>
+
 <body>
 
   <h1>Basic JS Calculator</h1>
@@ -37,10 +42,24 @@
   <div id="result"></div>
 
   <script type="text/javascript">
-  function doCalculation(){
-    // you code
-  }
+    const math_func = {
+      "-": function (x, y) { return x - y },
+      "+": function (x, y) { return x + y },
+      "*": function (x, y) { return x * y },
+      "/": function (x, y) { return x / y },
+    }
+    function doCalculation() {
+      // you code
+      let num1 = document.getElementById("num1").value;
+      let num2 = document.getElementById("num2").value;
+      let operator = document.getElementById("operator").value;
+      let result = math_func[operator](parseInt(num1), parseInt(num2));
+
+      document.getElementById("result").innerHTML = result;
+
+    }
   </script>
 
 </body>
+
 </html>
